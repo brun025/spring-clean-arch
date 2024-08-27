@@ -1,10 +1,10 @@
-package io.github.daylanbueno.pessoaapi;
+package br.com.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PessoaApiApplicationTests {
+class UserApiApplicationTests {
 
 	@Test
 	void contextLoads() {

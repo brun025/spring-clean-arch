@@ -2,7 +2,6 @@ package br.com.api.infrastructure.gateways;
 
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 import br.com.api.core.entities.User;
@@ -12,7 +11,6 @@ import br.com.api.infrastructure.persistence.UserEntity;
 import br.com.api.infrastructure.persistence.UserRepository;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Component
