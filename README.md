@@ -64,3 +64,4 @@ cd spring-clean
    ```
 
 The application will start and be available at `http://localhost:8080/api/v1/users`.
+The documentation is available at `http://localhost:8080/swagger-ui/index.html`.
