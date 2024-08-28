@@ -1,6 +1,5 @@
 package br.com.api.core.usecases.impl;
 
-import br.com.api.core.exceptions.UserNotFoundException;
 import br.com.api.core.gateways.UserGateway;
 import br.com.api.core.usecases.DeleteUserUseCase;
 
@@ -13,7 +12,7 @@ public class DeleteUserUseCaseImpl  implements  DeleteUserUseCase {
     }
 
     @Override
-    public void execute(Long id) throws UserNotFoundException {
+    public void execute(Long id) {
         userGateway.deleteUser(id);
     }
 }

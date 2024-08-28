@@ -15,6 +15,5 @@ public class UserDtoMapper {
     
     public User toEntityUpdate(Long id, UpdateUserDto user) {
     	return new User(id, user.name(), user.email(), null);
-    	//BeanUtils.copyProperties(user, alter);
     }
 }

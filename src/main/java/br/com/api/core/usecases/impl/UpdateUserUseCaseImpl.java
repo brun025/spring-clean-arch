@@ -1,7 +1,6 @@
 package br.com.api.core.usecases.impl;
 
 import br.com.api.core.entities.User;
-import br.com.api.core.exceptions.UserNotFoundException;
 import br.com.api.core.gateways.UserGateway;
 import br.com.api.core.usecases.UpdateUserUseCase;
 
@@ -14,7 +13,7 @@ public class UpdateUserUseCaseImpl implements  UpdateUserUseCase {
     }
 
     @Override
-    public User execute(User user) throws UserNotFoundException {
+    public User execute(User user) {
        return userGateway.updateUser(user);
     }
 }

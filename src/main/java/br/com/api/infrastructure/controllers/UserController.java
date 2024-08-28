@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import br.com.api.core.entities.User;
-import br.com.api.core.exceptions.UserNotFoundException;
 import br.com.api.core.usecases.CreateUserUseCase;
 import br.com.api.core.usecases.DeleteUserUseCase;
 import br.com.api.core.usecases.GetAllUsersUseCase;
@@ -19,6 +18,7 @@ import br.com.api.infrastructure.dtos.UpdateUserDto;
 import org.springframework.http.HttpStatus;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -50,21 +50,21 @@ public class UserController {
     
     @GetMapping(produces = "application/json", value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public User getById(@PathVariable Long id) throws UserNotFoundException {
-    	User user = getUserUseCase.execute(id);
+    public Optional<User> getById(@PathVariable Long id) {
+    	Optional<User> user = getUserUseCase.execute(id);
         return user;
     }
     
     @PutMapping(produces = "application/json", value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public User updateUser(@PathVariable Long id, @RequestBody @Valid UpdateUserDto userDTO) throws UserNotFoundException {
+    public User updateUser(@PathVariable Long id, @RequestBody @Valid UpdateUserDto userDTO) {
         User user = updateUserUseCase.execute(pessoaDtoMapper.toEntityUpdate(id, userDTO));
         return user;
     }
     
     @DeleteMapping(produces = "application/json", value = "/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteUser(@PathVariable Long id) throws UserNotFoundException {
+    public void deleteUser(@PathVariable Long id) {
         deleteUserUseCase.execute(id);
     }
 }
