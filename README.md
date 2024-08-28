@@ -46,13 +46,13 @@ The applications in this repository are built using Spring Boot and following th
 ### Installation
 
 1. Clone the repository
-git clone https://github.com/brun025/spring-clean-arch.git
+git clone https://github.com/brun025/spring-clean-arch.git spring-clean
 
 
 2. Change to project directory
 
 ```bash
-cd spring-boot-cleanarch
+cd spring-clean
 ```
 
 3. How to run the applications
@@ -63,10 +63,4 @@ cd spring-boot-cleanarch
    ./mvnw spring-boot:run
    ```
 
-   2. To run `cleanarch-from-scratch` application, change to its directory and run
-     
-   ```bash
-   ./gradlew bootRun
-   ```
-
-The application will start and be available at `http://localhost:8080`. When accessing the address, you will see the Swagger UI documentation screen.
+The application will start and be available at `http://localhost:8080/api/v1/users`.
