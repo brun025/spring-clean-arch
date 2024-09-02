@@ -9,8 +9,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import br.com.api.core.exceptions.EmailAlreadyExistsException;
-import br.com.api.core.exceptions.UserNotFoundException;
+import br.com.api.domain.exceptions.EmailAlreadyExistsException;
+import br.com.api.domain.exceptions.UserNotFoundException;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

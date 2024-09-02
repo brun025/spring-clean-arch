@@ -4,10 +4,10 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Component;
 
-import br.com.api.core.entities.User;
-import br.com.api.core.exceptions.EmailAlreadyExistsException;
-import br.com.api.core.exceptions.UserNotFoundException;
-import br.com.api.core.gateways.UserGateway;
+import br.com.api.domain.User;
+import br.com.api.domain.UserGateway;
+import br.com.api.domain.exceptions.EmailAlreadyExistsException;
+import br.com.api.domain.exceptions.UserNotFoundException;
 import br.com.api.infrastructure.persistence.UserEntity;
 import br.com.api.infrastructure.persistence.UserRepository;
 

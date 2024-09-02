@@ -2,7 +2,7 @@ package br.com.api.infrastructure.controllers;
 
 import org.springframework.stereotype.Component;
 
-import br.com.api.core.entities.User;
+import br.com.api.domain.User;
 import br.com.api.infrastructure.dtos.CreateUserDto;
 import br.com.api.infrastructure.dtos.UpdateUserDto;
 

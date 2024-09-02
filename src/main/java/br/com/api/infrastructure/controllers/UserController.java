@@ -5,12 +5,12 @@ import lombok.AllArgsConstructor;
 
 import org.springframework.web.bind.annotation.*;
 
-import br.com.api.core.entities.User;
-import br.com.api.core.usecases.CreateUserUseCase;
-import br.com.api.core.usecases.DeleteUserUseCase;
-import br.com.api.core.usecases.GetAllUsersUseCase;
-import br.com.api.core.usecases.GetUserUseCase;
-import br.com.api.core.usecases.UpdateUserUseCase;
+import br.com.api.application.CreateUserUseCase;
+import br.com.api.application.DeleteUserUseCase;
+import br.com.api.application.GetAllUsersUseCase;
+import br.com.api.application.GetUserUseCase;
+import br.com.api.application.UpdateUserUseCase;
+import br.com.api.domain.User;
 import br.com.api.infrastructure.dtos.CreateUserDto;
 import br.com.api.infrastructure.dtos.UpdateUserDto;
 

@@ -4,17 +4,17 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import br.com.api.core.gateways.UserGateway;
-import br.com.api.core.usecases.CreateUserUseCase;
-import br.com.api.core.usecases.DeleteUserUseCase;
-import br.com.api.core.usecases.GetAllUsersUseCase;
-import br.com.api.core.usecases.GetUserUseCase;
-import br.com.api.core.usecases.UpdateUserUseCase;
-import br.com.api.core.usecases.impl.CreateUserUseCaseImpl;
-import br.com.api.core.usecases.impl.DeleteUserUseCaseImpl;
-import br.com.api.core.usecases.impl.GetAllUsersUseCaseImpl;
-import br.com.api.core.usecases.impl.GetUserUseCaseImpl;
-import br.com.api.core.usecases.impl.UpdateUserUseCaseImpl;
+import br.com.api.application.CreateUserUseCase;
+import br.com.api.application.DeleteUserUseCase;
+import br.com.api.application.GetAllUsersUseCase;
+import br.com.api.application.GetUserUseCase;
+import br.com.api.application.UpdateUserUseCase;
+import br.com.api.application.impl.CreateUserUseCaseImpl;
+import br.com.api.application.impl.DeleteUserUseCaseImpl;
+import br.com.api.application.impl.GetAllUsersUseCaseImpl;
+import br.com.api.application.impl.GetUserUseCaseImpl;
+import br.com.api.application.impl.UpdateUserUseCaseImpl;
+import br.com.api.domain.UserGateway;
 
 @Configuration
 public class BeansConfig {
