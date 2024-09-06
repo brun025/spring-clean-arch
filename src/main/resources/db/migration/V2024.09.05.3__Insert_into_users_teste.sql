@@ -1,0 +1,1 @@
+insert into users(id, name, email, password, active, created_at, updated_at, deleted_at) values('1', 'admin', 'admin@gmail.com', '12345', true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, null);

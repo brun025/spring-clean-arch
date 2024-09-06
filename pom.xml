@@ -8,11 +8,11 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>io.github.daylanbueno</groupId>
+	<groupId>br.com.api</groupId>
 	<artifactId>pessoa-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>pessoa-api</name>
-	<description>Api de cadastro de pessoas</description>
+	<description>Api de cadastro de usuários</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -26,13 +26,27 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-core</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-database-postgresql</artifactId>
+		    <version>10.10.0</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.postgresql</groupId>
+		  <artifactId>postgresql</artifactId>
+		  <scope>runtime</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.modelmapper</groupId>
-			<artifactId>modelmapper</artifactId>
-			<version>3.1.0</version>
+		    <groupId>io.vavr</groupId>
+		    <artifactId>vavr</artifactId>
+		    <version>0.9.0</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.springdoc</groupId>
