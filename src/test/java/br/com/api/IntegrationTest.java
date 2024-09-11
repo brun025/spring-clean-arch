@@ -1,4 +1,4 @@
-package br.com.api.infrastructure;
+package br.com.api;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;

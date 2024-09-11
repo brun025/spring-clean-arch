@@ -40,8 +40,7 @@ public class DefaultUpdateUserUseCase extends UpdateUserUseCase {
         }
 
         final var notification = Notification.create();
-        aUser
-                .update(aName, aEmail, isActive)
+        aUser.update(aName, aEmail, isActive)
                 .validate(notification);
 
         return notification.hasError() ? Left(notification) : update(aUser);

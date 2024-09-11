@@ -26,12 +26,12 @@ public class DefaultCreateUserUseCase extends CreateUserUseCase {
         final var aEmail = aCommand.email();
         final var aPassword = aCommand.password();
         final var isActive = aCommand.isActive();
-
-        final var notification = Notification.create();
         
         if(this.userGateway.existsByEmail(aEmail)) {
     		throw new EmailAlreadyExistsException("E-mail already exists, please enter another");
-    	} 
+    	}
+
+        final var notification = Notification.create(); 
 
         final var aUser = User.newUser(aName, aEmail, aPassword, isActive);
         aUser.validate(notification);

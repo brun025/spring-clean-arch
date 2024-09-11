@@ -1,22 +1,27 @@
 package br.com.api.infrastructure.api;
 
-import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import br.com.api.domain.pagination.Pagination;
 import br.com.api.infrastructure.dtos.CreateUserRequest;
 import br.com.api.infrastructure.dtos.UpdateUserRequest;
 import br.com.api.infrastructure.dtos.UserListResponse;
 import br.com.api.infrastructure.dtos.UserResponse;
-
-import org.springframework.http.HttpStatus;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 
 @Tag(name = "Users") 
 @RequestMapping("api/v1/users")
@@ -33,7 +38,7 @@ public interface UserAPI {
             @ApiResponse(responseCode = "500", description = "An internal server error was thrown"),
     })
     @ResponseStatus(HttpStatus.CREATED)
-    ResponseEntity<?> createUser(@RequestBody @Valid CreateUserRequest input);
+    ResponseEntity<?> createUser(@RequestBody CreateUserRequest input);
     
     @GetMapping
     @Operation(summary = "List all categories paginated")
@@ -73,7 +78,7 @@ public interface UserAPI {
             @ApiResponse(responseCode = "404", description = "User was not found"),
             @ApiResponse(responseCode = "500", description = "An internal server error was thrown"),
     })
-    ResponseEntity<?> updateById(@PathVariable(name = "id") String id, @RequestBody @Valid UpdateUserRequest input);
+    ResponseEntity<?> updateById(@PathVariable(name = "id") String id, @RequestBody UpdateUserRequest input);
 
     @DeleteMapping(value = "{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

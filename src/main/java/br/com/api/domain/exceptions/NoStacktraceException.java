@@ -2,7 +2,9 @@ package br.com.api.domain.exceptions;
 
 public class NoStacktraceException extends RuntimeException {
 
-    public NoStacktraceException(final String message) {
+    private static final long serialVersionUID = 1L;
+
+	public NoStacktraceException(final String message) {
         this(message, null);
     }
 

@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.json.JacksonTester;
 
+import br.com.api.JacksonTest;
 import br.com.api.domain.Fixture;
-import br.com.api.infrastructure.JacksonTest;
 
 @JacksonTest
-public class CreateUserDtoTest {
+public class CreateUserRequestTest {
 
 	@Autowired
     private JacksonTester<CreateUserRequest> json;

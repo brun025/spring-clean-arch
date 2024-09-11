@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import br.com.api.domain.exceptions.EmailAlreadyExistsException;
 import br.com.api.domain.exceptions.NotFoundException;
-import br.com.api.domain.exceptions.UserNotFoundException;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -32,12 +31,6 @@ public class CustomExceptionHandler {
         Map<String, List<String>> errorResponse = new HashMap<>();
         errorResponse.put("errors", errors);
         return errorResponse;
-    }
-    
-    @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity<RestErrorMessage> userNotFoundHandler(UserNotFoundException exception) {
-    	RestErrorMessage threatResponse = new RestErrorMessage(HttpStatus.NOT_FOUND, exception.getMessage()); 
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(threatResponse);
     }
     
     @ExceptionHandler(NotFoundException.class)

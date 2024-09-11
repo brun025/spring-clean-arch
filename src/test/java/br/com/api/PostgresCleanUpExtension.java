@@ -1,4 +1,4 @@
-package br.com.api.infrastructure;
+package br.com.api;
 
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
