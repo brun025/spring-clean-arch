@@ -55,9 +55,9 @@ git clone https://github.com/brun025/spring-clean-arch.git spring-clean
 cd spring-clean
 ```
 
-3. How to run the applications
+3. How to run the application
 
-   1. To run `cleanarch-from-ntier` application, change to its directory and run
+   1. To run the application, change to its directory and run
      
    ```bash
    ./mvnw spring-boot:run
